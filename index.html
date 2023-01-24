@@ -12,11 +12,10 @@
   </div>
   <div id="clicker-container">
       <p>Score: <span id="score">0</span></p>
+      <p id="Title">Title: Noob</p>
       <div id="cookie-container">
           <img id="cookie" src="cookie.png">
       </div>
-      <div id="Title">
-        <h1>Text</h1>
       </div>
   </div>
 </body>
@@ -46,7 +45,7 @@ function addScore() {
   score++;
   document.getElementById("score").innerHTML = score;
   
-  if (score > 100) {
+  if (score > 10) {
     var header = document.getElementsByClassName("Title")[0];
     header.innerHTML = "Congratulations! You've reached over 100 points!";
   }
@@ -59,4 +58,3 @@ function addScore() {
   document.getElementById("score").innerHTML = score;
 }
 </script>
-
