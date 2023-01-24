@@ -1,0 +1,51 @@
+.Title {
+    text-align: center;
+}
+
+#Title {
+  text-align: center; /* center the Title element horizontally */
+  margin-top: 20px; /* add some space between the cookie and the Title */
+}
+
+
+* {
+  background-color: rgb(47, 138, 210);
+}
+
+#cookie-container {
+  position: relative; /* so we can position the cookie image inside it */
+  width: 100px; /* set the width of the container */
+  height: 100px; /* set the height of the container */
+  transition: transform 0.3s ease-in-out; /* add transition effect */
+  margin:100px /* center the container horizontally */
+}
+
+#cookie {
+    position: absolute; /* center the cookie image inside the container */
+    top: 50%;
+    left: 50%;
+    transform: scale(1); /* set the initial scale */
+    transition: transform 0.3s ease-in-out; /* add transition effect */
+    animation: spin 1s infinite linear; /* add the animation */
+    transform: translate(-50%, -50%); /* move the image up and left by 50% to 
+  }
+  
+  #cookie-container.popped {
+    transform: scale(1.2); /* increase the scale when the "popped" class is added */
+  }
+  
+  #cookie.popped {
+    transform: scale(1.5); /* increase the scale when the "popped" class is added */
+  }
+
+  
+  @keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  
+  #cookie.spinning {
+    animation: spin 3s infinite linear;
+  }
+  

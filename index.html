@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system">
+<head>
+    <title>Clicker</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="e.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="header-container">
+      <h1 id="header">Clicker Game</h1>
+  </div>
+  <div id="clicker-container">
+      <p>Score: <span id="score">0</span></p>
+      <div id="cookie-container">
+          <img id="cookie" src="cookie.png">
+      </div>
+      <div id="Title">
+        <h1>Text</h1>
+      </div>
+  </div>
+</body>
+
+
+
+<script>
+score = 0
+var spin = false; 
+
+var cookie = document.getElementById("cookie");
+var cookieContainer = document.getElementById("cookie-container");
+
+cookie.addEventListener("click", function(){
+  cookie.classList.add("popped");
+  cookieContainer.classList.add("popped");
+  addScore();
+  setTimeout(function(){
+    cookie.classList.remove("popped");
+    cookieContainer.classList.remove("popped");
+  }, 150);
+});
+
+
+function addScore() {
+  var score = document.getElementById("score").innerHTML;
+  score++;
+  document.getElementById("score").innerHTML = score;
+  
+  if (score > 100) {
+    var header = document.getElementsByClassName("Title")[0];
+    header.innerHTML = "Congratulations! You've reached over 100 points!";
+  }
+}
+
+
+function addScore() {
+  var score = document.getElementById("score").innerHTML;
+  score++;
+  document.getElementById("score").innerHTML = score;
+}
+</script>
+
