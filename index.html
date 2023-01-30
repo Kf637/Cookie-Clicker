@@ -12,7 +12,7 @@
   </div>
   <div id="clicker-container">
       <p>Score: <span id="score">0</span></p>
-      <p id="Title">Title: Noob</p>
+      <p id="1Title">Title: First Steps</p>
       <div id="cookie-container">
           <img id="cookie" src="cookie.png">
       </div>
@@ -23,38 +23,116 @@
 
 
 <script>
-score = 0
-var spin = false; 
+var score = 0;
 
 var cookie = document.getElementById("cookie");
 var cookieContainer = document.getElementById("cookie-container");
+let imageElement = document.getElementById("cookie");
 
-cookie.addEventListener("click", function(){
-  cookie.classList.add("popped");
-  cookieContainer.classList.add("popped");
+cookieContainer.addEventListener("click", function() {
   addScore();
-  setTimeout(function(){
-    cookie.classList.remove("popped");
-    cookieContainer.classList.remove("popped");
-  }, 150);
 });
 
-
 function addScore() {
-  var score = document.getElementById("score").innerHTML;
   score++;
   document.getElementById("score").innerHTML = score;
   
-  if (score > 10) {
-    var header = document.getElementsByClassName("Title")[0];
-    header.innerHTML = "Congratulations! You've reached over 100 points!";
+  if (score > 49) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Novice's Adventure";
   }
-}
+  if (score > 99) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Starting Point";
+  }
+  if (score > 159) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Rookie's Quest";
+  }
+  if (score > 239) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Elementary Challenge";
+  }
+  if (score > 384) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Expert's Journey";
+  }
+  if (score > 591) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Master's Trial";
+  }
+  if (score > 699) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Pro's Odyssey";
+  }
+  if (score > 872) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Elite's Expedition";
+  }
+  if (score > 999) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Champion's Ascent";
+  }
+
+  if (score > 1395) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Grand Master";
+  }
+
+  if (score > 1699) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Mastermind";
+  }
+
+  if (score > 1999) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Chief Wizard";
+  }
+
+  if (score > 2875) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Prodigy";
+  }
+
+  if (score > 4562) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Master of All";
+  }
+
+  if (score > 6856) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Sage";
+  }
+  if (score > 9716) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Maestro";
+  }
+  if (score > 10901) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The De facto";
+  }
+  if (score > 15843) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Dominator";
+  }
+  if (score > 19738) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Imperator";
+  }
+  if (score > 39738) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: The Imposter Among Us";
+    imageElement.src = "Sus.png";
+  }
+  if (score > 54460) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Auto Clicker";
+  }
+  if (score > 99460) {
+    var header = document.getElementById("1Title");
+    header.innerHTML = "Title: Hacker";
+  }
 
 
-function addScore() {
-  var score = document.getElementById("score").innerHTML;
-  score++;
-  document.getElementById("score").innerHTML = score;
 }
 </script>
