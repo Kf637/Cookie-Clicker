@@ -13,7 +13,7 @@
 ## Made in 100% HTML, CSS and JS
   
 ## Still in WIP (Work In Process)
-  Version: 0.031b
+
 
 
 
